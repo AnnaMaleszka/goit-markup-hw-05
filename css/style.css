@@ -572,7 +572,7 @@ h1 {
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
   position: absolute;
-  bottom: 0;
+  top: 112px;
   transform: translateY(100%);
   transition: transform 250ms ease;
 }
@@ -592,6 +592,7 @@ h1 {
 
 .overlay-on-img:hover .overlay {
   transform: translateY(0);
+  top: 0;
 }
 
 /* okno modalne */
@@ -643,4 +644,199 @@ h1 {
   right: 8px;
   width: 30px;
   height: 30px;
+}
+
+.form {
+  margin-left: 40px;
+}
+
+.form-title {
+  padding: 40px 40px 0px 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 00.03em;
+  color: #212121;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.form-detail {
+  display: flex;
+}
+
+.label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.details {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 00.01em;
+  padding-bottom: 4px;
+  color: #757575;
+}
+
+.form-borders {
+  border: 0px;
+  border-color: transparent;
+}
+
+.form-borders:focus {
+  outline: 0;
+}
+
+.fieldset {
+  height: 40px;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-block: 30px;
+}
+
+.fieldset:hover,
+.fieldset:focus {
+  fill: #2196f3;
+  border-color: #2196f3;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fieldset-comment {
+  height: 120px;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  align-items: center;
+  padding: 0;
+
+  position: relative;
+}
+
+.fieldset-comment:hover,
+.fieldset-comment:focus {
+  fill: #2196f3;
+  border-color: #2196f3;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-comment {
+  border: 0px;
+  border-color: transparent;
+  height: 100px;
+  width: 438px;
+}
+.textarea-comment:focus {
+  outline: 0;
+}
+
+.checkbox {
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  color: rgba(117, 117, 117, 1);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 00.03em;
+}
+
+.form-link {
+  color: rgba(33, 150, 243, 1);
+}
+
+.icons {
+  width: 12px;
+  height: 12px;
+}
+
+.comment {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 00.01em;
+  padding-left: 16px;
+  padding-top: 12px;
+}
+
+.submit-button {
+  background-color: #2196f3;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border: #2196f3;
+  border-radius: 4px;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  text-align: center;
+  padding-top: 15px;
+}
+
+.join-button {
+  background-color: #2196f3;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  border: #2196f3;
+  border-radius: 4px;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  letter-spacing: 00.06em;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label-newsletter {
+  padding-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 00.03em;
+}
+
+.E-mail {
+  width: 358px;
+  height: 50px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: transparent;
+  padding-left: 16px;
+  margin-right: 12px;
+}
+
+.E-mail:focus {
+  outline: 0;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 150px;
+  bottom: 15px;
 }

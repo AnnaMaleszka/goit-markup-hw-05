@@ -553,12 +553,35 @@
               </svg>
             </a>
           </div>
-        </div>
+          </div>
+        
+
+          <div>
+              <p class="label-newsletter">
+              Zapisz się do newslettera
+          </p>
+          <input type="text" name="e-mail" class="E-mail" placeholder="E-mail"/>
+          <button type="submit" class="join-button">Zapisz się
+       <svg class="icon-send">
+              <use
+              xlink:href="./images/icons.svg#icon-icon-send"
+              width="24"
+              height="24"
+              ></use>
+            </svg>
+            
+          </button>
+          </div>
+
+        
       </section>
     </footer>
+
+
     <div class="backdrop is-hidden"data-modal>
         <div class="modal">
           <button type="button"class="close-btn" data-modal-close>
+           
             <svg class="iconX">
                 <use
                   xlink:href="./images/icons.svg#icon-Vector-1"
@@ -566,11 +589,75 @@
                   height="11"
                 x="20";
                 >
+                
                 </use>
               </svg>
-            </button>
+             
+              
+          </button>
+             <div>
+              <p class="form-title">Zostaw swoje dane w formularzu poniżej</p>
+              </div>
+
+          <form class="form">
+            <fieldset class="fieldset">
+              <label class="details label">
+                Imię
+              </label>
+              <svg  class="icons icon-position">
+                    <use xlink:href="./images/icons.svg#icon-Vector-1-1"
+                      width="12"
+                      height="12"
+                    >
+                    </use>
+              </svg>
+              <input type="name" name="name" class="form-borders"/>
+            </fieldset>
+              <fieldset class="fieldset">
+              <label class="details label">
+                Telefon
+              </label>
+              <svg  class="icons icon-position">
+                    <use xlink:href="./images/icons.svg#icon-Vector-2-1"
+                      width="12"
+                      height="12"
+                    >
+                    </use>
+              </svg>
+              <input type="name" name="name" class="form-borders"/>
+            </fieldset>
+             <fieldset class="fieldset">
+              <label class="details label">
+                E-mail
+              </label>
+              <svg  class="icons icon-position">
+                    <use xlink:href="./images/icons.svg#icon-Vector-3-1"
+                      width="12"
+                      height="12"
+                    >
+                    </use>
+              </svg>
+              <input type="name" name="name" class="form-borders"/>
+            </fieldset>
+               <fieldset class="fieldset-comment">
+              <label class="details label">
+                Komentarz
+              </label>
+              <textarea class="textarea-comment comment" name="text"  
+                  placeholder="Wprowadź tekst" ></textarea>
+            </fieldset>
+          </form>
+         <div >
+         <label class="checkbox">
+            <input type="checkbox" name="checkbox"/>
+           <p> Oświadczam iż akceptuję <a href="index.html" class="form-link"> Regulamin </a>i <a href="index.html" class="form-link">Politykę Prywatności</a>.
+         </div>
+         
+         <button type="submit" class="submit-button">Wyślij</button>
+        
         </div>  
     </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
+

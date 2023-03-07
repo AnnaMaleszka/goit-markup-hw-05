@@ -14,7 +14,7 @@ body {
   width: 1200px;
 
   padding: 0 15px;
-  justify-content: center;
+
   margin: 0 auto;
 }
 
@@ -45,6 +45,9 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-contact {
   display: flex;
@@ -65,21 +68,24 @@ h6 {
   text-decoration: none;
   color: var(--paragraph-color);
   fill: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-contact .link-contact:hover,
 .list-contact .link-contact:focus {
   color: var(--logo-kolor);
-  fill: v#2196F3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #2196f3;
 }
 
 .list-navi .link:hover,
 .list-navi .link:focus {
   color: var(--logo-kolor);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-navi .link:active {
+  color: #2196f3;
 }
 
 .link-active::after {
@@ -87,8 +93,7 @@ h6 {
   display: block;
   width: 100%;
   height: 4px;
-  bottom: 0;
-  left: 0;
+
   background-color: #2196f3;
   transform: translateY(30px);
   border-radius: 2px;
@@ -112,7 +117,7 @@ h6 {
   font-family: "Raleway", sans-serif;
   color: var(--logo-kolor);
   font-weight: 700;
-  font-style: Bold;
+
   font-size: 26px;
   line-height: 1.25;
 }
@@ -120,7 +125,7 @@ h6 {
   font-family: "Raleway", sans-serif;
   color: var(--logo-kolor);
   font-weight: 700;
-  font-style: Bold;
+
   font-size: 26px;
   line-height: 1.25;
 }
@@ -129,7 +134,7 @@ h6 {
   font-family: "Raleway", sans-serif;
   color: #000000;
   font-weight: 700;
-  font-style: Bold;
+
   font-size: 26px;
   line-height: 1.25;
 }
@@ -138,20 +143,19 @@ h6 {
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-weight: 700;
-  font-style: Bold;
+
   font-size: 26px;
   line-height: 1.25;
 }
 
 .page-description {
-  background-image: url("	https://github.com/AnnaMaleszka/goit-markup-hw-04/blob/f3b555a0f5ecb3d47580ae9f42c618655cfea97c/images/images/background.jpg?raw=true");
+  background-image: url("\images\background.jpg"),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   height: 600px;
   text-align: center;
-  background-color: rgba(47, 48, 58, 0.4);
-  background-blend-mode: difference;
+
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
 }
 
 .button {
@@ -165,8 +169,7 @@ h6 {
   padding: 10px 40px;
   text-align: center;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  padding: 10px 40px;
   letter-spacing: 0.06em;
   font-family: "Roboto", sans-serif;
 }
@@ -210,13 +213,14 @@ h1 {
 .list {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 30px;
 }
 
 .style-paragraph {
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.7;
   color: var(--paragraph-color);
 
   padding-top: 10px;
@@ -227,6 +231,7 @@ h1 {
   font-weight: 700;
   line-height: 1.14;
   color: var(--font-color);
+  margin-top: 30px;
 }
 
 .image-description {
@@ -275,7 +280,7 @@ h1 {
 .style-address {
   font-size: 14px;
   font-weight: 400;
-  font-style: normal;
+
   line-height: 1.71;
   color: #ffffff;
   margin-top: 20px;
@@ -287,23 +292,19 @@ h1 {
   font-weight: 400;
   line-height: 1.71;
   list-style-type: none;
-  list-style-position: outside;
-}
-
-.line-distance {
-  margin-bottom: 9px;
 }
 
 .link-footer {
   color: #ffffff99;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-footer:hover,
 .link-footer:focus {
   color: var(--logo-kolor);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .style-logo-footer {
@@ -321,6 +322,7 @@ h1 {
   padding-top: 20px;
   padding-left: 24px;
   padding-bottom: 4px;
+  letter-spacing: 0.06em;
 }
 
 .description-line2 {
@@ -331,6 +333,7 @@ h1 {
 
   padding-left: 24px;
   padding-bottom: 20px;
+  letter-spacing: 0.03em;
 }
 
 .portfolio {
@@ -339,7 +342,7 @@ h1 {
   list-style: none;
   margin-top: 50px;
   gap: 30px;
-  flex-basis: calc((100%- 60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .space {
@@ -366,16 +369,19 @@ h1 {
   background-color: #f5f4fa;
   font-size: 16px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1.625;
 
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
 
   color: var(--font-color);
-  font-style: medium;
+
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio .button-portfolio-item:hover,
@@ -384,13 +390,13 @@ h1 {
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border-portfolio {
   box-sizing: border-box;
-  border: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .icon {
@@ -398,8 +404,9 @@ h1 {
   height: 120px;
   width: 270px;
   border-radius: 4px;
-  margin-bottom: 30px;
+
   display: flex;
+  margin: 0;
   justify-content: center;
   align-items: center;
 }
@@ -422,6 +429,9 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media {
   width: 44px;
@@ -434,23 +444,10 @@ h1 {
 .social-media-icon:focus {
   fill: #ffffff;
   background-color: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-spacing {
   margin-right: 10px;
-}
-
-.contact-icon {
-  fill: #757575;
-}
-
-.contact-icon:hover,
-.contact-icon:focus {
-  fill: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients-border {
@@ -462,6 +459,9 @@ h1 {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: 0.4s;
 }
 
@@ -479,13 +479,14 @@ h1 {
 
 .our-clients {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients:hover,
 .our-clients:focus {
   fill: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list {
@@ -531,13 +532,14 @@ h1 {
   border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-icon-footer:hover,
 .social-media-icon-footer:focus {
   background-color: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .front-bacground {
@@ -553,12 +555,13 @@ h1 {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 70px;
+
   text-align: center;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   font-weight: 700;
   padding-top: 27px;
+  padding-bottom: 27px;
   letter-spacing: 0.03em;
 }
 
@@ -572,7 +575,8 @@ h1 {
   height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
   position: absolute;
-  top: 112px;
+  top: 0px;
+  transition-property: transform;
   transform: translateY(100%);
   transition: transform 250ms ease;
 }
@@ -585,7 +589,7 @@ h1 {
   color: #ffffff;
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.55;
   letter-spacing: 0.03em;
   padding: 49px 45px 49px 24px;
 }
@@ -617,6 +621,22 @@ h1 {
   border-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+  animation: modalanimation 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes modalanimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .close-btn {
@@ -655,7 +675,7 @@ h1 {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   letter-spacing: 00.03em;
   color: #212121;
 }
@@ -674,13 +694,15 @@ h1 {
 
 .label {
   position: absolute;
-  bottom: 0px;
+  /* bottom: 0px;
+  left: 0px; */
+  top: -20px;
   left: 0px;
 }
 
 .details {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 00.01em;
   padding-bottom: 4px;
   color: #757575;
@@ -723,14 +745,15 @@ h1 {
   padding: 0;
 
   position: relative;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fieldset-comment:hover,
 .fieldset-comment:focus {
   fill: #2196f3;
   border-color: #2196f3;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-comment {
@@ -752,7 +775,7 @@ h1 {
   align-items: center;
   color: rgba(117, 117, 117, 1);
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   letter-spacing: 00.03em;
 }
 
@@ -768,7 +791,7 @@ h1 {
 .comment {
   color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 00.01em;
   padding-left: 16px;
   padding-top: 12px;

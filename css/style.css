@@ -149,7 +149,7 @@ h6 {
 }
 
 .page-description {
-  background-image: url("/images/background.jpg"),
+  background-image: url("../images/background.jpg"),
     linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   height: 600px;
   text-align: center;
@@ -378,8 +378,6 @@ h1 {
 .space {
   display: block;
 }
-.shadow {
-}
 
 .shadow:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -580,16 +578,13 @@ h1 {
 .overlay {
   width: 370px;
   height: 294px;
-  background-color: rgba(33, 150, 243, 0.9);
+
   position: absolute;
 
-  transition-property: transform;
+  transition-property: transform, background-color;
   transform: translateY(100%);
   transition: transform 250ms ease;
-}
-
-.overlay::after {
-  content: "";
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-text {
@@ -604,6 +599,7 @@ h1 {
 .show_overlay:hover .overlay {
   transform: translateY(0);
   top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
 /* okno modalne */
